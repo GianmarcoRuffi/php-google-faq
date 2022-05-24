@@ -68,12 +68,44 @@ $faqs = [
 
   <title>Google Faq</title>
 </head>
+
+<style>
+
+ul {
+  list-style: none;
+}
+
+li {display:inline-block;
+margin-right:35px;}
+
+h2 {font-weight: bold;
+font-size: 25px;
+margin-bottom: 30px;
+margin-top: 30px;}
+
+p {font-size: 15px;
+  margin-bottom: 30px;}
+
+</style>
+
 <body>
-  
-  <div class="container d-flex justify-content-center">
+  <div class="header">
+  <h3>Google Privacy e Termini</h3>  
+  <ul>
+    <li>Introduzione</li>
+  <li>Norme sulla privacy</li>
+  <li>Termini di servizio</li>
+  <li>Tecnologie</li>
+  <li>Domande Frequenti</li></ul></div>
+  <hr>
+  <div class="container">
 
   <?php 
-        
+            foreach ($faqs as $v){
+              echo $v['question'];
+              echo $v['answer'];
+              echo $v['infos'];
+          }
             ?>
 
   </div>
